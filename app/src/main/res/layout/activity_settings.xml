@@ -10,34 +10,34 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:padding="8dp"
             android:layout_marginTop="14dp"
             android:layout_marginStart="4dp"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-        <Button
-            android:id="@+id/settings_back_button"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:background="@drawable/back_arrow_icon"
-            app:backgroundTint="@color/black"
+            <Button
+                android:id="@+id/settings_back_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/back_arrow_icon"
+                app:backgroundTint="@color/black" />
 
-            />
-            
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="12dp"
-            android:backgroundTint="@color/white"
-            android:text="@string/button_settings"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_main_size"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="@color/white"
+                android:text="@string/button_settings"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_main_size" />
         </LinearLayout>
+
     </FrameLayout>
 
     <Switch
