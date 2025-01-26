@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/settings_back_button"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
+            android:backgroundTint="@color/white"
+            app:iconTint="@color/black"
+            app:icon="@drawable/back_arrow_icon"
+            />
+            
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:gravity="start|center_vertical"
+            android:backgroundTint="@color/white"
+            android:text="@string/button_settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_main_size"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <Switch
+        android:id="@+id/switch_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="24dp"
+        android:paddingEnd="6dp"
+        android:paddingStart="16dp"
+        android:text="@string/black_theme"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_settings_size"
+        tools:ignore="UseSwitchCompatOrMaterialXml">
+
+    </Switch>
+
+    <TextView
+        android:id="@+id/textView_share_the_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/settings_padding"
+        android:text="@string/share_app"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_settings_size"
+        app:drawableEndCompat="@drawable/share_icon">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView_write_to_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/settings_padding"
+        android:text="@string/contact_support"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_settings_size"
+        app:drawableEndCompat="@drawable/support_icon">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView_user_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/settings_padding"
+        android:text="@string/user_agreement"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_settings_size"
+        app:drawableEndCompat="@drawable/forward_arrow_icon">
+
+    </TextView>
+
+
+
+</LinearLayout>
