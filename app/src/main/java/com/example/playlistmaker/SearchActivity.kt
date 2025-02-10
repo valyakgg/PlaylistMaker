@@ -66,7 +66,7 @@ class SearchActivity : AppCompatActivity() {
         super.onRestoreInstanceState(savedInstanceState)
         searchText = savedInstanceState.getString(KEY_SEARCH_TEXT)
     }
-
+//
     companion object {
         private const val KEY_SEARCH_TEXT = "searchText"
     }
