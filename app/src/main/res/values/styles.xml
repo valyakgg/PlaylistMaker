@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name = "MainButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:layout_marginHorizontal">@dimen/horizontal_16</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textSize">@dimen/text_main_size</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/icon_padding</item>
+        <item name="iconTint">@color/black</item>
+        <item name="cornerRadius">@dimen/corner_radius</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+    </style>
+    <style name = "SettingsTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:padding">@dimen/settings_padding</item>
+        <item name="android:textSize">@dimen/text_settings_size</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+    </style>
+
+</resources>
