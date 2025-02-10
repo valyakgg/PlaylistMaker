@@ -52,9 +52,9 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         try {
-            startActivity(Intent.createChooser(emailIntent, "Выберите почтовый клиент"))
+            startActivity(Intent.createChooser(emailIntent, getString(R.string.choose_email_client)))
         } catch (ex: ActivityNotFoundException) {
-            Toast.makeText(this, "Не найдено почтовых клиентов", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.no_email_clients_found), Toast.LENGTH_SHORT).show()
         }
     }
 
