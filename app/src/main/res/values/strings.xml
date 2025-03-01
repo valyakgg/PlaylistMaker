@@ -14,4 +14,7 @@
     <string name="user_agreement_url" translatable="false">https://yandex.ru/legal/practicum_offer/</string>
     <string name="choose_email_client">Выберите почтовый клиент</string>
     <string name="no_email_clients_found">Не найдено почтовых клиентов</string>
+    <string name="track_name">Название песни</string>
+    <string name="artist_name">Артист</string>
+    <string name="track_time">Продолжительность</string>
 </resources>

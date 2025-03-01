@@ -13,4 +13,7 @@
     <string name="share_text">Hello! Check out Android-development course on Yandex.Practicum: https://practicum.yandex.ru/android-developer/</string>
     <string name="choose_email_client">Select an email client</string>
     <string name="no_email_clients_found">No email clients found</string>
+    <string name="track_name">Track name</string>
+    <string name="artist_name">Artist name</string>
+    <string name="track_time">Track time</string>
 </resources>
