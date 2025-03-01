@@ -39,14 +39,15 @@
 
     </FrameLayout>
 
-    <Switch
-        android:id="@+id/switch_button"
-        style="@style/SettingsTextStyle"
-        android:paddingEnd="6dp"
-        android:text="@string/black_theme"
-        tools:ignore="UseSwitchCompatOrMaterialXml">
-
-    </Switch>
+    <androidx.appcompat.widget.SwitchCompat
+    android:id="@+id/switch_button"
+    style="@style/SettingsTextStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="6dp"
+    android:text="@string/black_theme"
+    app:thumbTint="@color/switch_thumb_color"
+    app:trackTint="@color/switch_track_color"/>
 
     <TextView
         android:id="@+id/textView_share_the_app"
