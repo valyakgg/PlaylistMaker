@@ -14,6 +14,6 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="colorSecondaryVariant">@color/white</item>
         <item name="colorTertiary">@color/white</item>
-
+        <item name="colorOnTertiary">@color/black</item>
     </style>
 </resources>
