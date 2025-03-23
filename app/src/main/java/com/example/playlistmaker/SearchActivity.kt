@@ -87,6 +87,8 @@ class SearchActivity : AppCompatActivity() {
             hideKeyboard(searchEditText)
             clearButton.visibility = View.GONE
             recyclerView.visibility = View.GONE
+            noResultsLayout.visibility = View.GONE
+            errorLayout.visibility = View.GONE
             trackList.clear()
             adapter.notifyDataSetChanged()
         }
