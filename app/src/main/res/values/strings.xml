@@ -17,4 +17,8 @@
     <string name="track_name">Название песни</string>
     <string name="artist_name">Артист</string>
     <string name="track_time">Продолжительность</string>
+    <string name="search_error">Ничего не нашлось</string>
+    <string name="connection_error">Проблемы со связью</string>
+    <string name="loading_error">Загрузка не удалась. Проверьте подключение к интернету</string>
+    <string name="retry_button">Обновить</string>
 </resources>

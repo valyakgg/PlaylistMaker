@@ -12,5 +12,6 @@
         <item name="colorOnSecondary">@color/gray</item>
         <item name="colorSecondaryVariant">@color/light_gray</item>
         <item name="colorTertiary">@color/gray</item>
+        <item name="colorOnTertiary">@color/white</item>
     </style>
 </resources>

@@ -16,4 +16,8 @@
     <string name="track_name">Track name</string>
     <string name="artist_name">Artist name</string>
     <string name="track_time">Track time</string>
+    <string name="search_error">Nothing was found</string>
+    <string name="connection_error">Connection error</string>
+    <string name="loading_error">Loading failed. Check internet connection</string>
+    <string name="retry_button">Retry</string>
 </resources>
