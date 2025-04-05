@@ -10,7 +10,10 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 
-class TrackAdapter(private val trackList: List<Track>) : RecyclerView.Adapter<TrackAdapter.TrackViewHolder>() {
+class TrackAdapter(
+    private val trackList: MutableList<Track>,
+    private val onItemClick: (Track) -> Unit
+) : RecyclerView.Adapter<TrackAdapter.TrackViewHolder>() {
 
     inner class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val trackNameTextView: TextView = itemView.findViewById(R.id.trackName)
@@ -21,7 +24,7 @@ class TrackAdapter(private val trackList: List<Track>) : RecyclerView.Adapter<Tr
         fun bind(track: Track) {
             trackNameTextView.text = track.trackName
             artistNameTextView.text = track.artistName
-            trackTimeTextView.text = track.trackTime
+            trackTimeTextView.text = formatTrackTime(track.trackTime)
 
             Glide.with(itemView)
                 .load(track.artworkUrl100)
@@ -33,6 +36,16 @@ class TrackAdapter(private val trackList: List<Track>) : RecyclerView.Adapter<Tr
                         .fitCenter()
                 )
                 .into(artworkImageView)
+
+            itemView.setOnClickListener {
+                onItemClick(track)
+            }
+        }
+
+        private fun formatTrackTime(millis: Long): String {
+            val seconds = (millis / 1000) % 60
+            val minutes = (millis / 1000) / 60
+            return String.format("%02d:%02d", minutes, seconds)
         }
     }
 
@@ -42,8 +55,14 @@ class TrackAdapter(private val trackList: List<Track>) : RecyclerView.Adapter<Tr
     }
 
     override fun onBindViewHolder(holder: TrackViewHolder, position: Int) {
-        val track = trackList[position]
-        holder.bind(track)
+        holder.bind(trackList[position])
     }
-    override fun getItemCount() = trackList.size
+
+    override fun getItemCount(): Int = trackList.size
+
+    fun updateTracks(newTracks: List<Track>) {
+        trackList.clear()
+        trackList.addAll(newTracks)
+        notifyDataSetChanged()
+    }
 }

@@ -9,15 +9,22 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.switchmaterial.SwitchMaterial
 
 class SettingsActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
         val settingsBackButton = findViewById<ImageButton>(R.id.settings_back_button)
+        val themeSwitcher = findViewById<SwitchMaterial>(R.id.themeSwitcher)
+        val preferences = getSharedPreferences("settings", MODE_PRIVATE)
 
+        themeSwitcher.isChecked = preferences.getBoolean("darkTheme", false)
+
+        themeSwitcher.setOnCheckedChangeListener { _, isChecked ->
+            (application as App).switchTheme(isChecked)
+        }
         settingsBackButton.setOnClickListener {
             finish()
 
