@@ -21,4 +21,6 @@
     <string name="connection_error">Проблемы со связью</string>
     <string name="loading_error">Загрузка не удалась. Проверьте подключение к интернету</string>
     <string name="retry_button">Обновить</string>
+    <string name="you_searched">Вы искали</string>
+    <string name="clear_history">Очистить историю</string>
 </resources>

@@ -20,4 +20,6 @@
     <string name="connection_error">Connection error</string>
     <string name="loading_error">Loading failed. Check internet connection</string>
     <string name="retry_button">Retry</string>
+    <string name="you_searched">You searched</string>
+    <string name="clear_history">Clear history</string>
 </resources>
