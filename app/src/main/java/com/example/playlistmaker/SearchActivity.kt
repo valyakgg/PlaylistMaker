@@ -3,8 +3,8 @@ package com.example.playlistmaker
 import ApiResponse
 import ITunesApiService
 import Song
-
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -179,7 +179,11 @@ class SearchActivity : AppCompatActivity() {
                 trackName = song.trackName,
                 artistName = song.artistName,
                 trackTime = song.trackTimeMillis,
-                artworkUrl100 = song.artworkUrl100
+                artworkUrl100 = song.artworkUrl100,
+                collectionName = song.collectionName ?: "",
+                releaseDate = song.releaseDate ?: "",
+                primaryGenreName = song.primaryGenreName ?: "",
+                country = song.country ?: ""
             )
         }
 
@@ -215,7 +219,17 @@ class SearchActivity : AppCompatActivity() {
 
     private fun onTrackClicked(track: Track) {
         searchHistory.addTrack(track)
-        updateHistoryVisibility()
+        val intent = Intent(this, AudioPlayerActivity::class.java).apply {
+            putExtra("TRACK_NAME", track.trackName)
+            putExtra("ARTIST_NAME", track.artistName)
+            putExtra("TRACK_TIME", track.trackTime)
+            putExtra("ARTWORK_URL", track.artworkUrl100)
+            putExtra("COLLECTION_NAME", track.collectionName)
+            putExtra("RELEASE_DATE", track.releaseDate)
+            putExtra("PRIMARY_GENRE", track.primaryGenreName)
+            putExtra("COUNTRY", track.country)
+        }
+        startActivity(intent)
     }
 
     private fun updateHistoryVisibility() {

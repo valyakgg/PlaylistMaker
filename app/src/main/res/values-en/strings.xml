@@ -22,4 +22,9 @@
     <string name="retry_button">Retry</string>
     <string name="you_searched">You searched</string>
     <string name="clear_history">Clear history</string>
+    <string name="play_progress">Play progress</string>
+    <string name="album_name">Album</string>
+    <string name="year_number">Year</string>
+    <string name="genre_name">Genre</string>
+    <string name="country_name">Country</string>
 </resources>
